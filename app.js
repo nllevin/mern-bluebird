@@ -11,7 +11,7 @@ mongoose
   .connect(db, { useNewUrlParser: true })
   .then(() => console.log("Connected to MongoDB successfully"))
   .catch(err => console.log(err));
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: false })); // Allows app to respond to things like Postman requests.
 app.use(bodyParser.json());
 
 const port = process.env.PORT || 5000;
